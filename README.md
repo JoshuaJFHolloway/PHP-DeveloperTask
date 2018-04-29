@@ -32,7 +32,8 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 ## Running tests
 
-- Run vendor/bin/phpunit
+- Run 'vendor/bin/phpunit' to see tests
+- Run 'vendor/bin/phpunit —coverage-html' to create coverage report. This is accessed by going into 
 
 
 ## Classes
@@ -53,6 +54,6 @@ This is only provisional and I am likely to change it as I adapt it to what I fe
 
 1) Setup PHP Unit to test drive app (X)
 2) Draw out provisional model of app structure (X) 
-3) Create classes outlined above
+3) Create classes outlined above (X)
 
 
