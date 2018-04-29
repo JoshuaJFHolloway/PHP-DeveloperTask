@@ -9,6 +9,7 @@ The deck arrives in perfect sequence (so, ace of hearts is at the bottom, two of
 The task is a simple one- Create a simple command line program that when executed recreates the scenario above and then performs the following two actions:
 
 Shuffle the cards - We would like to take the deck that is in sequence and shuffle it so that no two cards are still in sequence.
+
 Deal the cards - We would then like to deal seven cards to each player (one card to the each player, then a second card to each player, and so on)
 
 There is no need to necessarily do this in a visual way (for example, simply proving with a test that your deck is shuffled and that the players do now have seven cards will be sufficient)
