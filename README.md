@@ -32,8 +32,8 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 ## Running tests
 
-- Run 'vendor/bin/phpunit' to see tests
-- Run 'vendor/bin/phpunit —coverage-html' to create coverage report. This is accessed by going into 
+- Run 'vendor/bin/phpunit Tests' to see tests being ran.
+(- Run 'vendor/bin/phpunit —coverage-html' to create coverage report.) - Will be added
 
 
 ## Classes
