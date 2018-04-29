@@ -40,10 +40,9 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 My planning has resulted in me deciding upon 5 classes and their methods
 
-- Suit (Creates 4 arrays, each array being 13 cards of each one suit)
 - UserChoice (Provides a few strings which greet the player and ask if they want to Deal/Shuffle)
-- Deck (Creates a deck of all 4 arrays combined in order)
-- Card (Shuffler and Dealer methods)
+- Deck (Shuffler, Dealer and creates a deck of all 4 arrays combined in order)
+- Card (Creates 4 arrays, each array being 13 cards of each one suit)
 - Players (Initialises players that have a name and a hand(array))
 
 This is only provisional and I am likely to change it as I adapt it to what I feel is most necessary
