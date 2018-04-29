@@ -24,7 +24,7 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 ## Installation
 
-- run 'git clone https://github.com/JoshuaJFHolloway/PHP-DeveloperTask' in your terminal 
+- Run 'git clone https://github.com/JoshuaJFHolloway/PHP-DeveloperTask' in your terminal 
 
 ## Usage
 
