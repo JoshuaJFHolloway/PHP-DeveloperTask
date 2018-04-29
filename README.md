@@ -51,8 +51,8 @@ This is only provisional and I am likely to change it as I adapt it to what I fe
 
 ## Approach
 
-1) Setup PHP Unit to test drive app
-2) Draw out provisional model of app structure 
+1) Setup PHP Unit to test drive app (X)
+2) Draw out provisional model of app structure (X) 
 3) Create classes for Card suits.
 
 
