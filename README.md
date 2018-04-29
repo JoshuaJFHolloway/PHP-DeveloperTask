@@ -21,10 +21,27 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 - run 'git clone https://github.com/JoshuaJFHolloway/PHP-DeveloperTask' in your terminal 
 
+## Usage
+
+
 
 ## Running tests
 
 - Run vendor/bin/phpunit
+
+
+## Classes
+
+My planning has resulted in me deciding upon 5 classes and their methods
+
+- Suit (Creates 4 arrays, each array being 13 cards of each one suit)
+- UserChoice (Provides a few strings which greet the player and ask if they want to Deal/Shuffle)
+- Deck (Creates a deck of all 4 arrays combined in order)
+- Card (Shuffler and Dealer methods)
+- Players (Initialises players that have a name and a hand(array))
+
+This is only provisional and I am likely to change it as I adapt it to what I feel is most necessary
+
 
 
 ## Approach
@@ -32,3 +49,5 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 1) Setup PHP Unit to test drive app
 2) Draw out provisional model of app structure 
 3) Create classes for Card suits.
+
+
