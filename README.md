@@ -53,7 +53,10 @@ This is only provisional and I am likely to change it as I adapt it to what I fe
 
 1) Setup PHP Unit to test drive app (X)
 2) Draw out provisional model of app structure (X) 
-3) Create classes outlined above (X)
+3) Create Player class and its methods (X)
+4) Create Card class and its methods (X)
+5) Create Deck class and its methods ()
+6) Create UserChoice class and its methods()
 
 
 ## Mocking
