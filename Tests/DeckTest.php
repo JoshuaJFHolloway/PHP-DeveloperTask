@@ -8,14 +8,12 @@ class DeckTest extends PHPUnit\Framework\TestCase {
     public function testCreateSuit()
     {
         $deck= new Deck;
-        $suits=$deck->createSuit("suit");
+        $suits=$deck->createSuit("");
         $this->assertInternalType('array', $suits);
-        $this->assertEquals(13,count($suits));
+        $this->assertEquals(13, count($suits));
         $first=$suits[0];
         $this->assertInstanceOf('Card', $first);
         $this->assertObjectHasAttribute('suit', $first);
-
-//        $this->assertEquals($first, new Card("",""));
     }
 
     public function testCreateDecks()
