@@ -2,7 +2,18 @@
 
 require 'Card.php';
 
-class CardTest extends PHPUnit\Framework\TestCase {
+class CardTest extends PHPUnit\Framework\TestCase
+{
+
+    public function testClassHasAttributeSuit()
+    {
+        $this->assertObjectHasAttribute('suit', new Card(suit, value));
+    }
+
+    public function testClassHasAttributeValue()
+    {
+        $this->assertObjectHasAttribute('value', new Card(suit, value));
+    }
 
     public function testGetSuit()
     {
@@ -40,3 +51,4 @@ class CardTest extends PHPUnit\Framework\TestCase {
     }
 
 }
+

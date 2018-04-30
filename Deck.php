@@ -30,6 +30,21 @@ class Deck {
         );
     }
 
+    public function randomShuffle($createDeck) {
+        for($i = 0; $i < sizeof($createDeck); ++$i) {
+            $r = rand(0, $i);
+            $tmp = $createDeck[$i];
+            $createDeck[$i] = $createDeck[$r];
+            $createDeck[$r] = $tmp;
+
+            return $createDeck;
+        }
+    }
+
+    public function dealCards($createDeck){
+        return $this->randomShuffle($createDeck);
+    }
+
     }
 
 
