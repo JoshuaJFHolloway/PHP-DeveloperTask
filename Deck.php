@@ -21,6 +21,15 @@ class Deck {
         );
     }
 
+    public function createDeck() {
+        return array_merge(
+            $this->createSuit('diamonds'),
+            $this->createSuit('hearts'),
+            $this->createSuit('clubs'),
+            $this->createSuit('spades')
+        );
+    }
+
     }
 
 
