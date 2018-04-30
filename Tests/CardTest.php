@@ -6,7 +6,7 @@ class CardTest extends PHPUnit\Framework\TestCase {
 
     public function testGetSuit()
     {
-        $card = new Card($suit, $value);
+        $card = new Card(suit, value);
         $expected = [
             1 => "Diamond",
             2 => "Club",
@@ -19,7 +19,7 @@ class CardTest extends PHPUnit\Framework\TestCase {
 
     public function testValue()
     {
-        $card = new Card($suit, $value);
+        $card = new Card(suit, value);
         $expected = [
             "A" => 1,
             "2" => 2,

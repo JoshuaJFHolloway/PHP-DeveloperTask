@@ -56,3 +56,10 @@ This is only provisional and I am likely to change it as I adapt it to what I fe
 3) Create classes outlined above (X)
 
 
+## Mocking
+
+I have found it difficult to mock with PHP unit due to my unfamiliarity with the testing framework and PHP itself.
+Having not coded in PHP or used PHP unit up until 2 days ago I have found it troublesome to get it working in the time limit
+given.
+
+
