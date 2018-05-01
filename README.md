@@ -79,6 +79,11 @@ Having not coded in PHP or used PHP unit up until 2 days ago I have found it tro
 given. Did not help that getMock no longer works with updated versions of PHP and I had spent many an hour trying to work
 out why it was not working in my tests.
 
+Also I tried to use Mockery to mock objects such as the ArrayIterator but as soon as I installed it with the composer
+I could no longer run tests. I had continual 'Fatal Error: Allowed memory size' issues, which I could not resolve by
+setting the memory limit at the top of the file to a much larger limit. I left the mock I was looking to do still there
+commented out.
+
 ### Splitting tests up
 
 I would like to know more about how to **organise the tests**. I know in rspec and Jasmine you can use describe and context 
@@ -91,6 +96,13 @@ testing organisation conventions.
 
 I also felt that the names for the tests were becoming a bit too long. This is partially due to the lack of usage of a describe
 or context block. However, I felt the need to have them fairly long so that they would describe the test well enough.
+
+### CardGamePlay
+
+I am wondering whether I should have tested CardGamePlay.php. It uses one tested method and accesses indexes of from the Deck
+from said class. Everything it is doing is tested in the DeckTest.php. Moreover, what is not tested are strings I have written
+and I don't feel testing them is necessary considering that there is no behaviour to examine. I would like to know what the convention
+is with these files in php.
 
 
 ## Improvements
@@ -107,12 +119,7 @@ If I had more time:
   
 - I would have **improved the tests**. I know that they can be more accurate in what they are testing and I feel that I would have
   further refined them if given the time. 
-  
-- I had a bit of trouble having the Tests require the classes from a src folder. With more time I would have worked out
-  what I was doing to cause the errors. Its a bit of an eye sore having them in the route directory. Not to mention that
-  **file structure** is important to any app. This wouldn't be an issue to me in any other project, it was just an issue I was
-  having with PHP and PHP unit.
-  
+ 
 
 ## Screenshots
 

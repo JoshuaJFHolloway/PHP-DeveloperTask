@@ -20,6 +20,8 @@ class Card {
         return $this->value;
     }
 
+    // __toString() allows Card to be implicitly converted to string
+
     public function __toString() {
         return json_encode($this->getObjectProperties());
     }

@@ -1,8 +1,7 @@
 <?php
-require 'Deck.php';
+require 'src/Deck.php';
 
 class DeckTest extends PHPUnit\Framework\TestCase {
-
 
     public function testClassHasAttributeDeck()
     {

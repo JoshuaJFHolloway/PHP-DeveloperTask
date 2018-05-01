@@ -1,7 +1,5 @@
 <?php
 
-//require 'Card.php';
-
 class Player {
 
     private $id;
@@ -24,9 +22,9 @@ class Player {
         return $this->hand;
     }
 
-    public function addCard(Card $card)
-    {
-        $this->hand->append($card);
-    }
+//    public function addCard(Card $card)
+//    {
+//        $this->hand->append($card);
+//    }
 
 }

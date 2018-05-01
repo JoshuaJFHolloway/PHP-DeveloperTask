@@ -1,6 +1,6 @@
 <?php
 
-require 'Player.php';
+require 'src/Player.php';
 
 class PlayerTest extends PHPUnit\Framework\TestCase {
 
@@ -19,7 +19,7 @@ class PlayerTest extends PHPUnit\Framework\TestCase {
 
     public function testGetHand()
     {
-        $player = new Player(id);
+        $player = new Player('id');
         $expected = new ArrayObject();
 
         $this->assertEquals($expected, $player->getHand());
