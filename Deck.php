@@ -46,6 +46,7 @@ class Deck implements IteratorAggregate, ArrayAccess {
         return new ArrayIterator($this->deck);
     }
 
+
     public function randomShuffle() {
         for ($i = 0; $i < sizeof($this->deck); ++$i) {
             $r = rand(0, $i);
@@ -59,11 +60,9 @@ class Deck implements IteratorAggregate, ArrayAccess {
 
     public function checkIfAnyIndexIsSame() {
 
-        while(count(array_intersect_assoc($this->randomShuffle(), $this->createDeck()))) {
-            var_dump('Array1:', $this->randomShuffle());
-            var_dump('Array2:', $this->createDeck());
+        while(count(array_intersect_assoc($this->randomShuffle(), $this->createDeck())) >0) {
+            $this->randomShuffle();
         }
-
     }
 
     public function offsetGet($index) {
@@ -79,6 +78,6 @@ class Deck implements IteratorAggregate, ArrayAccess {
     public function offsetUnset($index) {
     }
 
-    }
+}
 
 
