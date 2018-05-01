@@ -29,6 +29,7 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 - Run 'git clone https://github.com/JoshuaJFHolloway/PHP-DeveloperTask' in your terminal 
 
+
 ## Usage
 
 - Run 'php CardGamePlay.php' in your terminal
@@ -39,6 +40,7 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 - Run 'vendor/bin/phpunit Tests' to see tests being ran.
 
 (- Run 'vendor/bin/phpunit —coverage-html' to create coverage report.) - Will be added
+
 
 ## Classes
 
@@ -59,6 +61,14 @@ My planning has resulted in me deciding upon 4 classes and their methods
 5) Create Player class and its methods (X) 
 6) Create CardGamePlay.php(X)
 
+### IteratorAggregate and ArrayAccess
+
+IteratorAggregate is used so that I can implement a new ArrayIterator on the class Deck. This allows me to
+traverse the object using foreach in the CardGamePlay.php file to print to the terminal each card as a string.
+
+In order to use the Deck object as an array I needed to use ArrayAccess in conjunction with IteratorAggregate.
+From what I understand, ArrayAccess requires the methods offsetSet, offsetUnset, offsetExists and offsetGet.
+
 
 ## Testing
 
@@ -69,7 +79,7 @@ Having not coded in PHP or used PHP unit up until 2 days ago I have found it tro
 given. Did not help that getMock no longer works with updated versions of PHP and I had spent many an hour trying to work
 out why it was not working in my tests.
 
-### Splitting them up
+### Splitting tests up
 
 I would like to know more about how to **organise the tests**. I know in rspec and Jasmine you can use describe and context 
 to arrange tests into sections. These sections would relate to the testing of particular methods. I was aware that sometimes
@@ -81,6 +91,7 @@ testing organisation conventions.
 
 I also felt that the names for the tests were becoming a bit too long. This is partially due to the lack of usage of a describe
 or context block. However, I felt the need to have them fairly long so that they would describe the test well enough.
+
 
 ## Improvements
 
