@@ -38,6 +38,10 @@ class Deck implements IteratorAggregate, ArrayAccess {
         );
     }
 
+    public function isFullDeck() {
+        return count($this->deck);
+    }
+
     public function getIterator() {
         return new ArrayIterator($this->deck);
     }
@@ -72,28 +76,18 @@ class Deck implements IteratorAggregate, ArrayAccess {
 //        return $array;
 //    }
 
-
-    public function offsetExists($index) {
-        return array_key_exists($index, $this->deck);
-    }
-
     public function offsetGet($index) {
         return $this->deck[$index];
     }
 
-    public function offsetSet($index, $value) {
-        if ($index == null) {
-            $this->deck[] = $value;
-            return;
-        }
+    public function offsetExists($index) {
+    }
 
-        $this->deck[$index] = $value;
+    public function offsetSet($index, $value) {
     }
 
     public function offsetUnset($index) {
-        array_splice($this->deck, $index, 1);
     }
-
 
     }
 
