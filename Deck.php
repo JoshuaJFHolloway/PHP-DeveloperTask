@@ -70,16 +70,16 @@ class Deck implements IteratorAggregate, ArrayAccess {
 //        new Player("Y", []);
 //        new Player("Z", []);
 //    }
-
-    public function encodedJSON() {
-        $array = $this->deck;
-
-        foreach($array as &$card) {
-            $card = $card->__toString();
-        }
-
-        return $array;
-    }
+//
+//    public function encodedJSON() {
+//        $array = $this->deck;
+//
+//        foreach($array as &$card) {
+//            $card = $card->__toString();
+//        }
+//
+//        return $array;
+//    }
 
 
 
@@ -123,7 +123,6 @@ class Deck implements IteratorAggregate, ArrayAccess {
 
         array_splice($this->deck, $index, 1);
     }
-
 
 
     }
