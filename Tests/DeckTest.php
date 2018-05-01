@@ -4,6 +4,12 @@ require 'Deck.php';
 
 class DeckTest extends PHPUnit\Framework\TestCase {
 
+
+    public function testClassHasAttributeDeck()
+    {
+        $this->assertClassHasAttribute('deck', 'Deck');
+    }
+
     public function testCreateSuit()
     {
         $deck= new Deck;

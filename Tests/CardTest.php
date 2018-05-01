@@ -6,12 +6,12 @@ class CardTest extends PHPUnit\Framework\TestCase
 
     public function testClassHasAttributeSuit()
     {
-        $this->assertObjectHasAttribute('suit', new Card(suit, value));
+        $this->assertClassHasAttribute('suit', 'Card');
     }
 
     public function testClassHasAttributeValue()
     {
-        $this->assertObjectHasAttribute('value', new Card(suit, value));
+        $this->assertClassHasAttribute('value', 'Card');
     }
 
     public function testGetSuit()

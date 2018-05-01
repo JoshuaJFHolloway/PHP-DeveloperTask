@@ -6,7 +6,7 @@ class PlayerTest extends PHPUnit\Framework\TestCase {
 
     public function testClassHasAttributeId()
     {
-        $this->assertObjectHasAttribute('id', new Player('George'));
+        $this->assertClassHasAttribute('id', 'Player');
     }
 
     public function testGetId()
