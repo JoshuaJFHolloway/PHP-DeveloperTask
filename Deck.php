@@ -29,10 +29,6 @@ class Deck implements IteratorAggregate, ArrayAccess {
         );
     }
 
-    public function getIterator() {
-        return new ArrayIterator($this->deck);
-    }
-
     public function createDeck() {
         return array_merge(
             $this->createSuit('diamonds'),
@@ -42,6 +38,9 @@ class Deck implements IteratorAggregate, ArrayAccess {
         );
     }
 
+    public function getIterator() {
+        return new ArrayIterator($this->deck);
+    }
 
     public function randomShuffle() {
         for ($i = 0; $i < sizeof($this->deck); ++$i) {
@@ -63,14 +62,6 @@ class Deck implements IteratorAggregate, ArrayAccess {
 
     }
 
-
-//    public function dealDeck () {
-//        new Player("W", []);
-//        new Player("X", []);
-//        new Player("Y", []);
-//        new Player("Z", []);
-//    }
-//
 //    public function encodedJSON() {
 //        $array = $this->deck;
 //
@@ -82,45 +73,24 @@ class Deck implements IteratorAggregate, ArrayAccess {
 //    }
 
 
-
     public function offsetExists($index) {
         return array_key_exists($index, $this->deck);
     }
 
     public function offsetGet($index) {
-        if (!$this->offsetExists($index)) {
-            throw new OutOfBoundsException(
-                "The index '$index' does not exist."
-            );
-        }
         return $this->deck[$index];
     }
 
     public function offsetSet($index, $value) {
-        if (!($value instanceof Card))
-            throw new InvalidArgumentException('Decks only contain cards.');
-
         if ($index == null) {
             $this->deck[] = $value;
             return;
-        }
-
-        if (!is_numeric($index) || $index != (int) $index) {
-            throw new InvalidArgumentException("Index '$index' must be an integer.");
-        }
-
-        if (!$this->offsetExists($index)) {
-            throw new OutOfBoundsException("Index '$index' does not exist");
         }
 
         $this->deck[$index] = $value;
     }
 
     public function offsetUnset($index) {
-        if (!$this->offsetExists($index)) {
-            throw new InvalidArgumentException("Index '$index' Does not exist.");
-        }
-
         array_splice($this->deck, $index, 1);
     }
 
