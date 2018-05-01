@@ -1,5 +1,8 @@
 # PHP Developer Task - Card Dealer and Shuffler
 
+Using PHP and PHP unit for the first time, I worked on an app to satsify the following scenario. 
+
+
 The scenario is as follows:
 
 You have a deck of 52 cards, comprised of 4 suits (hearts, clubs, spades and diamonds) each with 13 values (Ace, two, three, four, five, six, seven, eight, nine, ten, jack, queen and king).
@@ -42,41 +45,33 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 My planning has resulted in me deciding upon 4 classes and their methods
 
 - CardGamePlay (Provides a few strings which explain as the app will shuffle and deal cards)
-- Deck (Shuffler, Dealer and creates a deck of all 4 arrays combined in order)
-- Card (Creates 4 arrays, each array being 13 cards of each one suit)
-- Players (Initialises players that have a name and a hand(array))
-
-This is only provisional and I am likely to change it as I adapt it to what I feel is most necessary
-
+- Deck (Creates a deck in perfect order, shuffles it so that no card is in the same position and deals them)
+- Card (Initialises card objects and converts them to strings)
+- Players (Initialises players that have a name, a hand(array) and a method to push cards to the hand)
 
 
 ## Approach
 
 1) Setup PHP Unit to test drive app (X)
-2) Draw out provisional model of app structure (X) 
-3) Create Player class and its methods (X)
-4) Create Card class and its methods (X)
-5) Create Deck class and its methods (X)
+2) Draw out provisional model of app structure (which is outlined above in classes section) (X) 
+3) Create Card class and its methods (X)
+4) Create Deck class and its methods (X)
+5) Create Player class and its methods (X) 
 6) Create CardGamePlay.php(X)
 
 
-## Objectives
+## Testing
 
-1) Deck created in perfect sequence (X)
-2) Shuffle deck so that no card is in the same position (X)
-3) Deal seven cards to each one of the 4 players in sequence ()
+### Mocking
 
-
-## Mocking
-
-I have found it difficult to mock with PHP unit due to my unfamiliarity with the testing framework and PHP itself.
+I have found it **difficult to mock with PHP unit** due to my unfamiliarity with the testing framework and PHP itself.
 Having not coded in PHP or used PHP unit up until 2 days ago I have found it troublesome to get it working in the time limit
 given. Did not help that getMock no longer works with updated versions of PHP and I had spent many an hour trying to work
 out why it was not working in my tests.
 
-### Splitting up Tests
+### Splitting them up
 
-I would like to know more about how to organise the tests. I know in rspec and Jasmine you can use describe and context 
+I would like to know more about how to **organise the tests**. I know in rspec and Jasmine you can use describe and context 
 to arrange tests into sections. These sections would relate to the testing of particular methods. I was aware that sometimes
 tests were testing too many assertions at once and this would be troublesome in the future if one was to fail. This is
 because it would be much more difficult to determine which assertion is failing. 
@@ -86,3 +81,18 @@ testing organisation conventions.
 
 I also felt that the names for the tests were becoming a bit too long. This is partially due to the lack of usage of a describe
 or context block. However, I felt the need to have them fairly long so that they would describe the test well enough.
+
+## Improvements
+
+If I had more time:
+
+- I would have **refactored** the code more. Especially, methods like createSuit in the Deck class. Methods such
+  as this could be replaced with a loop to prevent code multiplication. 
+  
+- I would have **implemented the dealing method**. I would have created a method in the Deck class that would
+  deal the shuffled deck array to 4 of the Player class instantiations. Passing in the dealt card into each Players'
+  array(hand) by calling the addCard method commented out in the Player class. Passing one at a time to each of the 4
+  Players would have been carried out by using a normal loop.
+  
+- I would have **improved the tests**. I know that they can be more accurate in what they are testing and I feel that I would have
+  further refined them if given the time. 
