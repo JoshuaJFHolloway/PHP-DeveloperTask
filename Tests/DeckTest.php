@@ -1,7 +1,6 @@
 <?php
 
 require 'Deck.php';
-//include_once('Card.php');
 
 class DeckTest extends PHPUnit\Framework\TestCase {
 
@@ -28,15 +27,15 @@ class DeckTest extends PHPUnit\Framework\TestCase {
 
     }
 
-    public function testRandomShuffle()
-    {
-        $card = new Card(arg1, arg2);
-        $deck = new Deck;
-
-        $expected  = array_fill(0, 52, $card);
-
-        $this->assertEquals($expected, $deck->randomShuffle($deck->createDeck()));
-
-    }
+//    public function testRandomShuffle()
+//    {
+//        $card = new Card(arg1, arg2);
+//        $deck = new Deck;
+//
+//        $expected  = array_fill(0, 52, $card);
+//
+//        $this->assertEquals($expected, $deck->randomShuffle());
+//
+//    }
 
 }
