@@ -34,7 +34,6 @@ class DeckTest extends PHPUnit\Framework\TestCase {
         $deck = new Deck;
         $decks = $deck->createDeck();
         $this->assertInternalType('array', $decks);
-        $this->assertEquals(52, count($decks));
     }
 
     public function testCreateDeckFirstCardCorrect()
@@ -53,6 +52,13 @@ class DeckTest extends PHPUnit\Framework\TestCase {
         $first=$deckCreated[51];
         $this->assertEquals("hearts", $first->getSuit());
         $this->assertEquals("A", $first->getValue());
+    }
+
+    public function testisFullDeck()
+    {
+        $deck = new Deck;
+        $decks = $deck->isFullDeck();
+        $this->assertEquals(52, $decks);
     }
 
 //    public function testRandomShuffle()
