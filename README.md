@@ -118,7 +118,12 @@ If I had more time:
   Players would have been carried out by using a normal loop.
   
 - I would have **improved the tests**. I know that they can be more accurate in what they are testing and I feel that I would have
-  further refined them if given the time. 
+  further refined them if given the time. Mocking would have certainly helped this. Also, I would have liked to implement
+  php's equivalent of beforeEach in the tests to remove the duplications of calls to classes.
+  
+- I would have **improved the shuffle method**. Currently it continues to shuffle until it creates an array unique to the
+  perfectly arranged array. While this is created seamlessly, it is computational heavy and a larger array would slow
+  down the app. Hence, given more time, I would create a method that can create a unique array with less iterations.
  
 
 ## Screenshots
