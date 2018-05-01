@@ -28,13 +28,14 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 ## Usage
 
+- Run 'php CardGamePlay.php' in your terminal
 
 
 ## Running tests
 
 - Run 'vendor/bin/phpunit Tests' to see tests being ran.
-(- Run 'vendor/bin/phpunit —coverage-html' to create coverage report.) - Will be added
 
+(- Run 'vendor/bin/phpunit —coverage-html' to create coverage report.) - Will be added
 
 ## Classes
 
@@ -73,4 +74,15 @@ Having not coded in PHP or used PHP unit up until 2 days ago I have found it tro
 given. Did not help that getMock no longer works with updated versions of PHP and I had spent many an hour trying to work
 out why it was not working in my tests.
 
+### Splitting up Tests
 
+I would like to know more about how to organise the tests. I know in rspec and Jasmine you can use describe and context 
+to arrange tests into sections. These sections would relate to the testing of particular methods. I was aware that sometimes
+tests were testing too many assertions at once and this would be troublesome in the future if one was to fail. This is
+because it would be much more difficult to determine which assertion is failing. 
+
+I tried to keep the tests separate because of what was aforementioned but I would like to know more about php unit
+testing organisation conventions. 
+
+I also felt that the names for the tests were becoming a bit too long. This is partially due to the lack of usage of a describe
+or context block. However, I felt the need to have them fairly long so that they would describe the test well enough.
