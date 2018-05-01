@@ -66,16 +66,6 @@ class Deck implements IteratorAggregate, ArrayAccess {
 
     }
 
-//    public function encodedJSON() {
-//        $array = $this->deck;
-//
-//        foreach($array as &$card) {
-//            $card = $card->__toString();
-//        }
-//
-//        return $array;
-//    }
-
     public function offsetGet($index) {
         return $this->deck[$index];
     }
