@@ -1,14 +1,16 @@
 <?php
 
+//require 'Card.php';
+
 class Player {
 
     private $id;
     private $hand;
 
-    public function __construct($id, $hand)
+    public function __construct($id)
     {
         $this->id = $id;
-        $this->hand = [];
+        $this->hand = new ArrayObject();
 
     }
 
@@ -22,5 +24,9 @@ class Player {
         return $this->hand;
     }
 
+    public function addCard(Card $card)
+    {
+        $this->hand->append($card);
+    }
 
 }
