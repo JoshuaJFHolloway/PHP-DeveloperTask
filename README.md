@@ -32,16 +32,29 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 ## Usage
 
-- Run 'php CardGamePlay.php' in your terminal
+Run 'php CardGamePlay.php' in your terminal and it will automatically play for you.
 
-<img align="centre" src="http://i64.tinypic.com/21l6746.png" width="399"/>
+<img align="centre" src="https://preview.ibb.co/etEtES/Screen_Shot_2018_05_01_at_22_49_52.png" width="399"/>
+
+The game continues to show you the perfectly organised deck. At the end it highlights the last
+first card for those who are not interested in browsing across the whole deck.
+
+<img align="centre" src="https://image.ibb.co/mQoLuS/Screen_Shot_2018_05_01_at_22_50_36.png" width="399"/>
+
+Afterwards, it creates a shuffled deck with no card in the same position and proceeds to show you it.
+
+<img align="centre" src="https://image.ibb.co/cnjbZS/Screen_Shot_2018_05_01_at_22_50_49.png" width="399"/>
+
+At the end it shows you the first card in the shuffled deck. 
+
+<img align="centre" src="https://image.ibb.co/k8HfuS/Screen_Shot_2018_05_01_at_22_50_57.png" width="399"/>
 
 
 ## Running tests
 
-- Run 'vendor/bin/phpunit Tests' to see tests being ran.
+Run 'vendor/bin/phpunit Tests' to see tests ran.
 
-(- Run 'vendor/bin/phpunit —coverage-html' to create coverage report.) - Will be added
+<img align="centre" src="https://preview.ibb.co/m7mOES/Screen_Shot_2018_05_01_at_23_56_12.png" width="399"/>
 
 
 ## Classes
