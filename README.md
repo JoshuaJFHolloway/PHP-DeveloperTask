@@ -40,7 +40,7 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 My planning has resulted in me deciding upon 5 classes and their methods
 
-- UserChoice (Provides a few strings which greet the player and ask if they want to Deal/Shuffle)
+- CardGamePlay (Provides a few strings which explain as the app will shuffle and deal cards)
 - Deck (Shuffler, Dealer and creates a deck of all 4 arrays combined in order)
 - Card (Creates 4 arrays, each array being 13 cards of each one suit)
 - Players (Initialises players that have a name and a hand(array))
@@ -55,8 +55,15 @@ This is only provisional and I am likely to change it as I adapt it to what I fe
 2) Draw out provisional model of app structure (X) 
 3) Create Player class and its methods (X)
 4) Create Card class and its methods (X)
-5) Create Deck class and its methods ()
-6) Create UserChoice class and its methods()
+5) Create Deck class and its methods (X)
+6) Create CardGamePlay.php(X)
+
+
+## Objectives
+
+1) Deck created in perfect sequence (X)
+2) Shuffle deck so that no card is in the same position (X)
+3) Deal seven cards to each one of the 4 players in sequence ()
 
 
 ## Mocking
