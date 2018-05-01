@@ -38,7 +38,7 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 ## Classes
 
-My planning has resulted in me deciding upon 5 classes and their methods
+My planning has resulted in me deciding upon 4 classes and their methods
 
 - CardGamePlay (Provides a few strings which explain as the app will shuffle and deal cards)
 - Deck (Shuffler, Dealer and creates a deck of all 4 arrays combined in order)
