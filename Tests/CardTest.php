@@ -4,6 +4,10 @@
 class CardTest extends PHPUnit\Framework\TestCase
 {
 
+    public function setUp() {
+        $this->card = new Card("Heart", 12);
+    }
+
     public function testClassHasAttributeSuit()
     {
         $this->assertClassHasAttribute('suit', 'Card');
@@ -16,7 +20,7 @@ class CardTest extends PHPUnit\Framework\TestCase
 
     public function testGetSuit()
     {
-        $card = new Card("Heart", 12);
+        $card = $this->card;
         $expected = "Heart";
 
         $this->assertEquals($expected, $card->getSuit());
@@ -24,7 +28,7 @@ class CardTest extends PHPUnit\Framework\TestCase
 
     public function testGetValue()
     {
-        $card = new Card("Heart", 12);
+        $card = $this->card;
         $expected = "12";
 
         $this->assertEquals($expected, $card->getValue());
@@ -32,7 +36,7 @@ class CardTest extends PHPUnit\Framework\TestCase
 
     public function testGetObjectProperties()
     {
-        $card = new Card("Heart", 12);
+        $card = $this->card;
         $expected = Array ('suit' => 'Heart', 'value' => 12);
 
         $this->assertEquals($expected, $card->getObjectProperties());
@@ -40,13 +44,13 @@ class CardTest extends PHPUnit\Framework\TestCase
 
     public function test__ToStringIsJSON()
     {
-        $card = new Card("Heart", 12);
+        $card = $this->card;
         $this->assertJson($card->__toString());
     }
 
     public function test__ToStringCreatesCorrectJSONFile()
     {
-        $card = new Card("Heart", 12);
+        $card = $this->card;
         $testGetObjectProperties= Array ('suit' => 'Heart', 'value' => 12);
         $expected = json_encode($testGetObjectProperties);
 
