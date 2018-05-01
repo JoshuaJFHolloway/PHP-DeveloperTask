@@ -4,20 +4,25 @@ require 'Player.php';
 
 class PlayerTest extends PHPUnit\Framework\TestCase {
 
+    public function testClassHasAttributeId()
+    {
+        $this->assertObjectHasAttribute('id', new Player('George'));
+    }
+
     public function testGetId()
     {
-        $card = new Player("monkey", hand);
-        $expected = "monkey";
+        $player = new Player("George");
+        $expected = "George";
 
-        $this->assertEquals($expected, $card->getId());
+        $this->assertEquals($expected, $player->getId());
     }
 
     public function testGetHand()
     {
-        $card = new Player(id, hand);
-        $expected = [];
+        $player = new Player(id);
+        $expected = new ArrayObject();
 
-        $this->assertEquals($expected, $card->getHand());
+        $this->assertEquals($expected, $player->getHand());
     }
 
 }
