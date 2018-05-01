@@ -22,12 +22,35 @@ class CardTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($expected, $card->getSuit());
     }
 
-    public function testValue()
+    public function testGetValue()
     {
         $card = new Card("Heart", 12);
         $expected = "12";
 
         $this->assertEquals($expected, $card->getValue());
+    }
+
+    public function testGetObjectProperties()
+    {
+        $card = new Card("Heart", 12);
+        $expected = Array ('suit' => 'Heart', 'value' => 12);
+
+        $this->assertEquals($expected, $card->getObjectProperties());
+    }
+
+    public function test__ToStringIsJSON()
+    {
+        $card = new Card("Heart", 12);
+        $this->assertJson($card->__toString());
+    }
+
+    public function test__ToStringCreatesCorrectJSONFile()
+    {
+        $card = new Card("Heart", 12);
+        $testGetObjectProperties= Array ('suit' => 'Heart', 'value' => 12);
+        $expected = json_encode($testGetObjectProperties);
+
+        $this->assertEquals($expected, $card->__toString());
     }
 
 }
