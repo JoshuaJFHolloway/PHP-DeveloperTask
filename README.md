@@ -107,3 +107,17 @@ If I had more time:
   
 - I would have **improved the tests**. I know that they can be more accurate in what they are testing and I feel that I would have
   further refined them if given the time. 
+  
+- I had a bit of trouble having the Tests require the classes from a src folder. With more time I would have worked out
+  what I was doing to cause the errors. Its a bit of an eye sore having them in the route directory. Not to mention that
+  **file structure** is important to any app. This wouldn't be an issue to me in any other project, it was just an issue I was
+  having with PHP and PHP unit.
+  
+
+## Screenshots
+
+
+
+
+
+
