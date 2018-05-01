@@ -10,27 +10,49 @@ class DeckTest extends PHPUnit\Framework\TestCase {
         $this->assertClassHasAttribute('deck', 'Deck');
     }
 
-    public function testCreateSuit()
+    public function testCreateSuitCreates13HeartArray()
     {
         $deck= new Deck;
-        $suits=$deck->createSuit("");
+        $suits=$deck->createSuit("hearts");
         $this->assertInternalType('array', $suits);
         $this->assertEquals(13, count($suits));
+    }
+
+    public function testCreateSuitHasCorrectCardKeyAndValue()
+    {
+        $deck= new Deck;
+        $suits=$deck->createSuit("hearts");
         $first=$suits[0];
         $this->assertInstanceOf('Card', $first);
         $this->assertObjectHasAttribute('suit', $first);
+        $this->assertEquals("hearts", $first->getSuit());
+        $this->assertEquals("K", $first->getValue());
     }
 
-    public function testCreateDecks()
+    public function testCreateDeck()
     {
-        $deck= new Deck;
-        $deckS=$deck->createDeck();
-        $this->assertInternalType('array', $deckS);
-        $this->assertEquals(52,count($deckS));
-        $first=$deckS[0];
-        $this->assertInstanceOf('Card', $first);
-//        $this->assertObjectHasAttribute("diamonds", $first);
+        $deck = new Deck;
+        $decks = $deck->createDeck();
+        $this->assertInternalType('array', $decks);
+        $this->assertEquals(52, count($decks));
+    }
 
+    public function testCreateDeckFirstCardCorrect()
+    {
+        $deck = new Deck;
+        $deckCreated=$deck->createDeck();
+        $first=$deckCreated[0];
+        $this->assertEquals("diamonds", $first->getSuit());
+        $this->assertEquals("K", $first->getValue());
+    }
+
+    public function testCreateDeckLastCardCorrect()
+    {
+        $deck = new Deck;
+        $deckCreated=$deck->createDeck();
+        $first=$deckCreated[51];
+        $this->assertEquals("hearts", $first->getSuit());
+        $this->assertEquals("A", $first->getValue());
     }
 
 //    public function testRandomShuffle()
