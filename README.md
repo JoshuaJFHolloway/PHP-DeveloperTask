@@ -34,6 +34,8 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 - Run 'php CardGamePlay.php' in your terminal
 
+<img align="centre" src="http://i64.tinypic.com/21l6746.png" width="399"/>
+
 
 ## Running tests
 
@@ -124,9 +126,9 @@ If I had more time:
 - I would have **improved the shuffle method**. Currently it continues to shuffle until it creates an array unique to the
   perfectly arranged array. While this is created seamlessly, it is computational heavy and a larger array would slow
   down the app. Hence, given more time, I would create a method that can create a unique array with less iterations.
+  
+- I would have **added a code coverage report**. This would allow me to see more clearly where my tests are lacking.
  
-
-## Screenshots
 
 
 
