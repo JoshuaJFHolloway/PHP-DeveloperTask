@@ -1,9 +1,6 @@
 # PHP Developer Task - Card Dealer and Shuffler
 
-Using PHP and PHP unit for the first time, I worked on an app to satsify the following scenario. 
-
-
-The scenario is as follows:
+Using PHP and PHP unit for the first time, I worked on an app to satisfy the following scenario:
 
 You have a deck of 52 cards, comprised of 4 suits (hearts, clubs, spades and diamonds) each with 13 values (Ace, two, three, four, five, six, seven, eight, nine, ten, jack, queen and king).
 There are four players waiting to play around a table.
@@ -32,7 +29,7 @@ There is no need to necessarily do this in a visual way (for example, simply pro
 
 ## Usage
 
-Run 'php CardGamePlay.php' in your terminal and it will automatically play for you.
+Run 'php src/CardGamePlay.php' in your terminal and it will automatically play for you.
 
 <img align="centre" src="https://preview.ibb.co/etEtES/Screen_Shot_2018_05_01_at_22_49_52.png" width="399"/>
 
@@ -54,7 +51,7 @@ At the end it shows you the first card in the shuffled deck.
 
 Run 'vendor/bin/phpunit Tests' to see tests ran.
 
-<img align="centre" src="https://preview.ibb.co/m7mOES/Screen_Shot_2018_05_01_at_23_56_12.png" width="399"/>
+<img align="centre" src="https://preview.ibb.co/dCgOES/Screen_Shot_2018_05_02_at_00_59_33.png" alt="Screen_Shot_2018_05_02_at_00_59_33" width="399"/>
 
 
 ## Classes
@@ -129,7 +126,7 @@ If I had more time:
   
 - I would have **implemented the dealing method**. I would have created a method in the Deck class that would
   deal the shuffled deck array to 4 of the Player class instantiations. Passing in the dealt card into each Players'
-  array(hand) by calling the addCard method commented out in the Player class. Passing one at a time to each of the 4
+  array(hand) by calling the addCard method commented out in the Player class. The method of passing one at a time to each of the 4
   Players would have been carried out by using a normal loop.
   
 - I would have **improved the tests**. I know that they can be more accurate in what they are testing and I feel that I would have
@@ -142,9 +139,3 @@ If I had more time:
   
 - I would have **added a code coverage report**. This would allow me to see more clearly where my tests are lacking.
  
-
-
-
-
-
-
