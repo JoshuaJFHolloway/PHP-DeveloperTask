@@ -139,3 +139,7 @@ If I had more time:
   
 - I would have **added a code coverage report**. This would allow me to see more clearly where my tests are lacking.
  
+
+## Authors
+
+Joshua Holloway
