@@ -1,7 +1,8 @@
 <?php
 require 'src/Deck.php';
 
-class DeckTest extends PHPUnit\Framework\TestCase {
+class DeckTest extends PHPUnit\Framework\TestCase
+{
 
     public function testClassHasAttributeDeck()
     {
@@ -10,17 +11,17 @@ class DeckTest extends PHPUnit\Framework\TestCase {
 
     public function testCreateSuitCreates13HeartArray()
     {
-        $deck= new Deck;
-        $suits=$deck->createSuit("hearts");
+        $deck = new Deck;
+        $suits = $deck->createSuit("hearts");
         $this->assertInternalType('array', $suits);
         $this->assertEquals(13, count($suits));
     }
 
     public function testCreateSuitHasCorrectCardKeyAndValue()
     {
-        $deck= new Deck;
-        $suits=$deck->createSuit("hearts");
-        $first=$suits[0];
+        $deck = new Deck;
+        $suits = $deck->createSuit("hearts");
+        $first = $suits[0];
         $this->assertInstanceOf('Card', $first);
         $this->assertObjectHasAttribute('suit', $first);
         $this->assertEquals("hearts", $first->getSuit());
@@ -37,8 +38,8 @@ class DeckTest extends PHPUnit\Framework\TestCase {
     public function testCreateDeckFirstCardCorrect()
     {
         $deck = new Deck;
-        $deckCreated=$deck->createDeck();
-        $first=$deckCreated[0];
+        $deckCreated = $deck->createDeck();
+        $first = $deckCreated[0];
         $this->assertEquals("diamonds", $first->getSuit());
         $this->assertEquals("K", $first->getValue());
     }
@@ -46,8 +47,8 @@ class DeckTest extends PHPUnit\Framework\TestCase {
     public function testCreateDeckLastCardCorrect()
     {
         $deck = new Deck;
-        $deckCreated=$deck->createDeck();
-        $first=$deckCreated[51];
+        $deckCreated = $deck->createDeck();
+        $first = $deckCreated[51];
         $this->assertEquals("hearts", $first->getSuit());
         $this->assertEquals("A", $first->getValue());
     }
@@ -69,7 +70,8 @@ class DeckTest extends PHPUnit\Framework\TestCase {
         $this->assertEquals($expected, iterator_to_array($getIterator));
     }
 
-    public function testRandomShuffle() {
+    public function testRandomShuffle()
+    {
 
         $deck = new Deck;
         $randomShuffle = $deck->randomShuffle();
@@ -79,17 +81,19 @@ class DeckTest extends PHPUnit\Framework\TestCase {
 
     }
 
-    public function testOffsetGet() {
+    public function testOffsetGet()
+    {
 
         $deck = new Deck;
-        $deckCreated=$deck->createDeck();
-        $first=$deckCreated[1];
+        $deckCreated = $deck->createDeck();
+        $first = $deckCreated[1];
         $offsetGet = $deck->offsetGet(1);
 
         $this->assertEquals($first, $offsetGet);
     }
 
-    public function testOffsetExistsIsPresent() {
+    public function testOffsetExistsIsPresent()
+    {
 
         $deck = new Deck;
 
@@ -97,7 +101,8 @@ class DeckTest extends PHPUnit\Framework\TestCase {
 
     }
 
-    public function testOffsetSetsIsPresent() {
+    public function testOffsetSetsIsPresent()
+    {
 
         $deck = new Deck;
 
@@ -105,7 +110,8 @@ class DeckTest extends PHPUnit\Framework\TestCase {
 
     }
 
-    public function testOffsetUnsetIsPresent() {
+    public function testOffsetUnsetIsPresent()
+    {
 
         $deck = new Deck;
 
@@ -113,20 +119,32 @@ class DeckTest extends PHPUnit\Framework\TestCase {
 
     }
 
+    public function testCheckIfAnyIndexIsSame()
+    {
 
+        $deck = new Deck;
+        $deck->checkIfAnyIndexIsSame();
+        $shuffledDeck = $deck->deck;
+        $perfectDeck = $deck->createDeck();
 
+        $array_one = $shuffledDeck;
+        $array_two = $perfectDeck;
 
-//    public function testCheckIfAnyIndexIsSame() {
-//
-//        $deck = new Deck;
-//        $indexIsSame= $deck->checkIfAnyIndexIsSame();
-//        $randomShuffle= $deck->randomShuffle();
-//
-//        $expected = $deck;
-//            count(array_intersect_assoc($this->randomShuffle(), $this->createDeck())
-//
-//        $this->assertNotEquals($expected, $indexIsSame);
-//    }
+        $this->assertNotTrue($this->checkIfIndexSame($array_one, $array_two));
+    }
+
+    public function checkIfIndexSame($array_one, $array_two)
+    {
+
+        foreach ($array_one as $array_one_key => $array_one_value) {
+            foreach ($array_two as $array_two_key => $array_two_value) {
+                if ($array_one_key == $array_two_key && $array_two_value == $array_one_value) {
+                    return true;
+                }
+            }
+        }
+    }
+}
 
 //    public function testGetIterator()
 //    {
@@ -136,5 +154,3 @@ class DeckTest extends PHPUnit\Framework\TestCase {
 //
 //        $this->testGetIterator($mock, $items);
 //    }
-
-}
