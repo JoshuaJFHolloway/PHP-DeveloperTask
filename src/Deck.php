@@ -4,7 +4,7 @@ require 'Card.php';
 
 class Deck implements IteratorAggregate, ArrayAccess {
 
-    private $deck;
+    public $deck;
 
     public function __construct(array $deck=null) {
             $this->deck = $this->createDeck();
@@ -79,5 +79,3 @@ class Deck implements IteratorAggregate, ArrayAccess {
     }
 
 }
-
-
