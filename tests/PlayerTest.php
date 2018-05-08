@@ -29,4 +29,29 @@ class PlayerTest extends PHPUnit\Framework\TestCase {
         $this->assertEquals($expected, $player->getHand());
     }
 
+
+    public function testGetObjectProperties()
+    {
+        $player = $this->player;
+        $expected = Array ('id' => 'George', 'hand' => new ArrayObject());
+
+        $this->assertEquals($expected, $player->getObjectProperties());
+    }
+
+    public function test__ToStringIsJSON()
+    {
+        $player = $this->player;
+        $this->assertJson($player->__toString());
+    }
+
+    public function test__ToStringCreatesCorrectJSONFile()
+    {
+        $player = $this->player;
+        $testGetObjectProperties= Array ('id' => 'George', 'hand' => new ArrayObject());
+        $expected = json_encode($testGetObjectProperties);
+
+        $this->assertEquals($expected, $player->__toString());
+    }
+
+
 }
