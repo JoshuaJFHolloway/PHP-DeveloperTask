@@ -22,6 +22,16 @@ class Player {
         return $this->hand;
     }
 
+    // __toString() allows Player to be implicitly converted to string
+
+    public function __toString() {
+        return json_encode($this->getObjectProperties());
+    }
+
+    public function getObjectProperties() {
+        return get_object_vars($this);
+    }
+
 //    public function addCard(Card $card)
 //    {
 //        $this->hand->append($card);
