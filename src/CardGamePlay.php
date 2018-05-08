@@ -51,7 +51,7 @@ echo("\n");
 echo "First card in the shuffled deck:"."\n";
 echo $deck['0'] . "\n";
 
-echo "Dealing cards to all 4 players"."\n";
+echo "The hands of 4 players before cards dealt to them"."\n";
 
 echo $player1;
 echo $player2;
