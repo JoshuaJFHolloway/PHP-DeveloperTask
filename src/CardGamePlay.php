@@ -50,13 +50,18 @@ echo("\n");
 
 echo "First card in the shuffled deck:"."\n";
 echo $deck['0'] . "\n";
+echo("\n");
 
 echo "The hands of 4 players before cards dealt to them"."\n";
-
+echo("\n");
 echo $player1;
+echo("\n");
 echo $player2;
+echo("\n");
 echo $player3;
+echo("\n");
 echo $player4;
+echo("\n");
 
 
 echo("\n");
